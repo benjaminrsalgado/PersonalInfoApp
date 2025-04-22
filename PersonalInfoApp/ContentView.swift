@@ -40,7 +40,10 @@ struct ProfileImageView: View {
 // ✅ Vista de la información
 struct InfoSectionView: View {
     var body: some View {
-     
+        Text("This is the first timeee ")
+            .font(.custom("Starbim", size: 30))
+            .foregroundColor(.blue)
+            .padding()
     }
 }
 
