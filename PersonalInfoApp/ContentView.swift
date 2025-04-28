@@ -33,21 +33,36 @@ struct TitleView: View {
 struct ProfileImageView: View {
     var body: some View {
         Image("alien")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 150, height: 150)
             .clipShape(Circle())
+            .overlay(Circle().stroke(Color.blue, lineWidth: 4))
             .shadow(radius: 10)
-            .border(Color.blue, width: 4)
-            .frame(width: 12, height: 10)
     }
 }
 
-// ✅ Vista de la información
+// ✅ Vista de la información, ME QUEDE AQUIII
 struct InfoSectionView: View {
     var body: some View {
         HStack{
-            Text("This is the first timeee ")
+            Text("I love going to the gym, and gain weight, i love all about fitness, and i follow science based training like Jeff Nippard.")
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
+                .padding()
                 .font(.custom("Starbim", size: 30))
                 .foregroundColor(.blue)
-                .padding()
+            Image(systemName: "figure.strengthtraining.traditional")
+            Button(action: {
+              
+                print("Botón presionado")
+            }) {
+                Image(systemName: "dumbbell")
+                    .resizable()
+                    .foregroundColor(.orange)
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+            }
         }
       
     }
