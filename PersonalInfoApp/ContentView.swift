@@ -6,18 +6,18 @@
 //
 import SwiftUI
 
+//Estructura general!!!!
 struct ContentView: View {
     var body: some View {
         VStack {
             TitleView()
             ProfileImageView()
             InfoSectionView()
-        
+            Spacer()
         }
     }
 }
 
-// ✅ Vista del título
 struct TitleView: View {
     var body: some View {
         VStack {
@@ -33,17 +33,23 @@ struct TitleView: View {
 struct ProfileImageView: View {
     var body: some View {
         Image("alien")
-            .frame(width: 12, height: 20)
+            .clipShape(Circle())
+            .shadow(radius: 10)
+            .border(Color.blue, width: 4)
+            .frame(width: 12, height: 10)
     }
 }
 
 // ✅ Vista de la información
 struct InfoSectionView: View {
     var body: some View {
-        Text("This is the first timeee ")
-            .font(.custom("Starbim", size: 30))
-            .foregroundColor(.blue)
-            .padding()
+        HStack{
+            Text("This is the first timeee ")
+                .font(.custom("Starbim", size: 30))
+                .foregroundColor(.blue)
+                .padding()
+        }
+      
     }
 }
 
