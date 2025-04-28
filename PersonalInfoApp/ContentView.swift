@@ -51,7 +51,7 @@ struct InfoSectionView: View {
                 .lineLimit(nil)
                 .padding()
                 .font(.custom("Starbim", size: 30))
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
             Image(systemName: "figure.strengthtraining.traditional")
             Button(action: {
               
@@ -60,7 +60,6 @@ struct InfoSectionView: View {
                 Image(systemName: "dumbbell")
                     .resizable()
                     .foregroundColor(.orange)
-                    .scaledToFit()
                     .frame(width: 40, height: 40)
             }
         }
